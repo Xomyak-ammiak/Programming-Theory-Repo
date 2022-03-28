@@ -373,7 +373,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1300993182}
+      - m_Target: {fileID: 268883239}
         m_TargetAssemblyTypeName: MenuUIHelper, Assembly-CSharp
         m_MethodName: NewGame
         m_Mode: 1
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1300993182}
+      - m_Target: {fileID: 268883239}
         m_TargetAssemblyTypeName: MenuUIHelper, Assembly-CSharp
         m_MethodName: ContinueGame
         m_Mode: 1
@@ -556,6 +556,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267309453}
   m_CullTransparentMesh: 1
+--- !u!1 &268883237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268883238}
+  - component: {fileID: 268883239}
+  m_Layer: 0
+  m_Name: MenuUIHelper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &268883238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268883237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.8651705, y: 5.0197916, z: 12.110546}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &268883239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268883237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aeeed7fd67e3e4449488c02efbb67ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &354240508
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +898,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1300993181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aeeed7fd67e3e4449488c02efbb67ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c3a25dd405a7b24e974fee2d67d5894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1041674687}
@@ -878,7 +921,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1549443577
 GameObject:
@@ -1343,7 +1386,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1300993182}
+      - m_Target: {fileID: 268883239}
         m_TargetAssemblyTypeName: MenuUIHelper, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
