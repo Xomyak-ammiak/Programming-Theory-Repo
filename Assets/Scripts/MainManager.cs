@@ -10,7 +10,7 @@ public class MainManager : MonoBehaviour
     public GameObject transition;
     public Animator transitionAnimator;
 
-    public float maxSpeed, maxMass, maxDive, speedCost, hookCost, lineCost;
+    public float maxSpeed, maxMass, maxDive, speedCost, hookCost, lineCost, money;
 
     private void Awake()
     {
@@ -34,6 +34,7 @@ public class MainManager : MonoBehaviour
         speedCost = 1;
         hookCost = 1;
         lineCost = 1;
+        money = 0;
     }
 
     public void StartTransitionAnimation()
@@ -49,6 +50,7 @@ public class MainManager : MonoBehaviour
         speedCost = 4;
         hookCost = 5;
         lineCost = 6;
+        money = 0;
         Save();
         maxSpeed = 0;
         maxMass = 0;
@@ -56,15 +58,16 @@ public class MainManager : MonoBehaviour
         speedCost = 0;
         hookCost = 0;
         lineCost = 0;
-        Debug.Log("maxSpeed: " + maxSpeed + " maxMass: " + maxMass + " maxDive: " + maxDive + " speedCost: " + speedCost + " hookCost: " + hookCost + " lineCost: " + lineCost);
+        money = 0;
+        Debug.Log("maxSpeed: " + maxSpeed + " maxMass: " + maxMass + " maxDive: " + maxDive + " speedCost: " + speedCost + " hookCost: " + hookCost + " lineCost: " + lineCost + " money: " + money);
         Load();
-        Debug.Log("maxSpeed: " + maxSpeed + " maxMass: " + maxMass + " maxDive: " + maxDive + " speedCost: " + speedCost + " hookCost: " + hookCost + " lineCost: " + lineCost);
+        Debug.Log("maxSpeed: " + maxSpeed + " maxMass: " + maxMass + " maxDive: " + maxDive + " speedCost: " + speedCost + " hookCost: " + hookCost + " lineCost: " + lineCost + " money: " + money);
     }
 
     [System.Serializable]
     class SaveData
     {
-        public float maxSpeed, maxMass, maxDive, speedCost, hookCost, lineCost;
+        public float maxSpeed, maxMass, maxDive, speedCost, hookCost, lineCost, money;
     }
 
     public void Save()
@@ -76,6 +79,7 @@ public class MainManager : MonoBehaviour
         data.speedCost = speedCost;
         data.hookCost = hookCost;
         data.lineCost = lineCost;
+        data.money = money;
 
         string json = JsonUtility.ToJson(data);
 
@@ -96,7 +100,8 @@ public class MainManager : MonoBehaviour
             speedCost = data.speedCost;
             hookCost = data.hookCost;
             lineCost = data.lineCost;
+            money = data.money;
         }
-        Debug.Log("maxSpeed: " + maxSpeed + " maxMass: " + maxMass + " maxDive: " + maxDive + " speedCost: " + speedCost + " hookCost: " + hookCost + " lineCost: " + lineCost);
+        Debug.Log("maxSpeed: " + maxSpeed + " maxMass: " + maxMass + " maxDive: " + maxDive + " speedCost: " + speedCost + " hookCost: " + hookCost + " lineCost: " + lineCost + " money: " + money);
     }
 }
