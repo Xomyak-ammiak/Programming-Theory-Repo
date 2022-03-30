@@ -7,10 +7,16 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
 
-    public GameObject transition;
     public Animator transitionAnimator;
 
-    public float maxSpeed, maxMass, maxDive, speedCost, hookCost, lineCost, money;
+    public float maxSpeed { get; set; }
+    public float maxMass { get; set; }
+    public float maxDive { get; set; }
+
+    public float speedCost { get; set; }
+    public float hookCost { get; set; }
+    public float lineCost { get; set; }
+    public float money { get; set; }
 
     private void Awake()
     {
@@ -23,7 +29,6 @@ public class MainManager : MonoBehaviour
         Instance = this;
 
         DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(transition);
     }
 
     public void ResetParameters()
