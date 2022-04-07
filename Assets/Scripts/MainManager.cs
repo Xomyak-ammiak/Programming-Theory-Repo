@@ -9,14 +9,126 @@ public class MainManager : MonoBehaviour
 
     public Animator transitionAnimator;
 
-    public float maxSpeed { get; set; }
-    public float maxMass { get; set; }
-    public float maxDive { get; set; }
+    private float _maxSpeed;
+    public float maxSpeed
+    {
+        get { return _maxSpeed; }
+        set
+        {
+            if (value < 1)
+            {
+                _maxSpeed = 1;
+                return;
+            }
+            if (value > 6)
+            {
+                _maxSpeed = 6;
+                return;
+            }
+            _maxSpeed = value;
+        }
+    }
 
-    public float speedCost { get; set; }
-    public float hookCost { get; set; }
-    public float lineCost { get; set; }
-    public float money { get; set; }
+    private float _maxMass;
+    public float maxMass
+    {
+        get { return _maxMass; }
+        set
+        {
+            if (value < 1)
+            {
+                _maxMass = 1;
+                return;
+            }
+            if (value > 6)
+            {
+                _maxMass = 6;
+                return;
+            }
+            _maxMass = value;
+        }
+    }
+
+    private float _maxDive;
+    public float maxDive
+    {
+        get { return _maxDive; }
+        set
+        {
+            if (value < 1)
+            {
+                _maxDive = 1;
+                return;
+            }
+            if (value > 6)
+            {
+                _maxDive = 6;
+                return;
+            }
+            _maxDive = value;
+        }
+    }
+
+
+    private float _speedCost;
+    public float speedCost
+    {
+        get { return _speedCost; }
+        set
+        {
+            if (value < 0)
+            {
+                _speedCost = 0;
+                return;
+            }
+            _speedCost = value;
+        }
+    }
+
+    private float _hookCost;
+    public float hookCost
+    {
+        get { return _hookCost; }
+        set
+        {
+            if (value < 0)
+            {
+                _hookCost = 0;
+                return;
+            }
+            _hookCost = value;
+        }
+    }
+
+    private float _lineCost;
+    public float lineCost
+    {
+        get { return _lineCost; }
+        set
+        {
+            if (value < 0)
+            {
+                _lineCost = 0;
+                return;
+            }
+            _lineCost = value;
+        }
+    }
+
+    private float _money;
+    public float money
+    {
+        get { return _money; }
+        set
+        {
+            if (value < 0)
+            {
+                _money = 0;
+                return;
+            }
+            _money = value;
+        }
+    }
 
     private void Awake()
     {
@@ -39,7 +151,7 @@ public class MainManager : MonoBehaviour
         speedCost = 1;
         hookCost = 1;
         lineCost = 1;
-        money = 0;
+        money = 100;
     }
 
     public void StartTransitionAnimation()

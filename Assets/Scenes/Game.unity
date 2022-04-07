@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &26494001
 RectTransform:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 30394814}
   - component: {fileID: 30394813}
   m_Layer: 5
-  m_Name: Text
+  m_Name: HookCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -521,6 +521,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopCanvas: {fileID: 26494000}
+  upHookText: {fileID: 1983836592}
+  upLineText: {fileID: 2105775074}
+  upSpeedText: {fileID: 1174784997}
+  speedCost: {fileID: 1781149323}
+  hookCost: {fileID: 30394813}
+  lineCost: {fileID: 1451900243}
 --- !u!4 &103327459
 Transform:
   m_ObjectHideFlags: 0
@@ -1282,7 +1288,7 @@ GameObject:
   - component: {fileID: 1174784998}
   - component: {fileID: 1174784997}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: UpSpeedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1494,7 +1500,7 @@ GameObject:
   - component: {fileID: 1451900244}
   - component: {fileID: 1451900243}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LineCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1649,6 +1655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8221919750947056112, guid: 1eb48c60d419a5f419d300635dfaa049, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8221919750947056114, guid: 1eb48c60d419a5f419d300635dfaa049, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1790,7 +1800,7 @@ GameObject:
   - component: {fileID: 1781149324}
   - component: {fileID: 1781149323}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SpeedCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2082,7 +2092,7 @@ GameObject:
   - component: {fileID: 1983836593}
   - component: {fileID: 1983836592}
   m_Layer: 5
-  m_Name: Text
+  m_Name: UpHookText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2227,7 +2237,7 @@ GameObject:
   - component: {fileID: 2105775075}
   - component: {fileID: 2105775074}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: UpLineText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
